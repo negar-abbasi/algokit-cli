@@ -258,10 +258,9 @@ services:
 
   indexer-db:
     container_name: {name}_postgres
-    image: postgres:13-alpine
+    image: bitnami/postgresql:latest
     ports:
       - 5443:5432
-    user: postgres
     environment:
       POSTGRES_USER: algorand
       POSTGRES_PASSWORD: algorand
