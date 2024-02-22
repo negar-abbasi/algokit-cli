@@ -25,7 +25,7 @@ SOURCE="$ARTIFACT_PATH"
 
 # Create the snapcraft.yaml file
 cat > "${DESTINATION_DIR}/snap/snapcraft.yaml" <<EOF
-name: algokit
+name: algo
 version: "$VERSION"
 summary: The AlgoKit CLI is the one-stop shop tool for developers building on Algorand
 description: |
@@ -50,4 +50,3 @@ apps:
 EOF
 
 echo "snapcraft.yaml has been created at ${DESTINATION_DIR}/snap/snapcraft.yaml"
-   
