@@ -2,6 +2,16 @@
 
 <!--next-version-placeholder-->
 
+## v1.12.0 (2024-02-22)
+
+### Feature
+
+*  adding snap distribution ci ([`a321795`](https://github.com/negar-abbasi/algokit-cli/commit/a3217950d724bd3f9f733ec248f0084bd5446407))
+
+### Fix
+
+* More explicit name for store login secret ([`ffc88ac`](https://github.com/negar-abbasi/algokit-cli/commit/ffc88ac9baadf0a4c9d543151cf830d109e55186))
+
 ## v1.11.4 (2024-02-19)
 
 ### Fix
