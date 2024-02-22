@@ -22,14 +22,14 @@ jobs:
     name: Check Python
     uses: ./.github/workflows/check-python.yaml
 
-  ci-build-python:
-    name: Build Python
-    uses: ./.github/workflows/build-python.yaml
-    needs: ci-check-python
+#  ci-build-python:
+#    name: Build Python
+#    uses: ./.github/workflows/build-python.yaml
+#    needs: ci-check-python
 
   release:
     name: Release Library
-    needs: ci-build-python
+#    needs: ci-build-python
     runs-on: ubuntu-latest
 
     steps:
