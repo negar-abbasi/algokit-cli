@@ -2,6 +2,12 @@
 
 <!--next-version-placeholder-->
 
+## v1.13.0 (2024-02-22)
+
+### Feature
+
+* Add dist format in zip and read it. ([`cb2e0b4`](https://github.com/negar-abbasi/algokit-cli/commit/cb2e0b447c0ea6eb0772a4c20a663013b61947bb))
+
 ## v1.12.2 (2024-02-22)
 
 
