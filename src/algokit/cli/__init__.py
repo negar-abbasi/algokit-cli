@@ -1,3 +1,5 @@
+import logging
+
 import click
 
 from algokit.cli.bootstrap import bootstrap_group
@@ -14,7 +16,7 @@ from algokit.cli.localnet import localnet_group
 from algokit.cli.task import task_group
 from algokit.core.conf import PACKAGE_NAME
 from algokit.core.log_handlers import color_option, verbose_option
-from algokit.core.version_prompt import do_version_prompt, skip_version_check_option
+from algokit.core.version_prompt import do_version_prompt, read_distribution_file, skip_version_check_option
 
 
 @click.group(
@@ -33,6 +35,9 @@ def algokit(*, skip_version_check: bool) -> None:
 
     If you are getting started, please see the quick start tutorial: https://bit.ly/algokit-intro-tutorial.
     """
+    logger = logging.getLogger(__name__)
+    distribution = read_distribution_file()
+    logger.debug(f"AlgoKit CLI started on dist: {distribution}")
     if not skip_version_check:
         do_version_prompt()
 
