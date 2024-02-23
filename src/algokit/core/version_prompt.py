@@ -39,12 +39,12 @@ def do_version_prompt() -> None:
             distribution = read_distribution_file()
             update_message = VERSION_UPDATE_MESSAGES.get(distribution, "manual process.")
             logger.info(
-                f"You are using AlgoKit version {current_version}, however version {latest_version} is available."
+                f"You are using AlgoKit version {current_version}, however version {latest_version} is available. "
                 f"Please use {update_message} to update."
             )
         else:
             logger.info(
-                f"You are using AlgoKit version {current_version}, however version {latest_version} is available."
+                f"You are using AlgoKit version {current_version}, however version {latest_version} is available. "
                 f"Please use `pipx upgrade algokit` to update."
             )
     else:
@@ -106,9 +106,9 @@ def _skip_version_prompt() -> bool:
 
 def read_distribution_file() -> str:
     if not is_binary_mode():
-        file_path = Path(__file__).resolve().parents[3] / "misc" / "distribution_channel.txt"
+        file_path = Path(__file__).resolve().parents[3] / "misc" / "distribution-method"
     else:
-        file_path = Path(__file__).resolve().parents[2] / "distribution_channel" / "distribution_channel.txt"
+        file_path = Path(__file__).resolve().parents[2] / "distribution-method" / "distribution-method"
     with Path.open(file_path) as file:
         content = file.read().strip()
 
