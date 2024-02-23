@@ -44,7 +44,7 @@ parts:
     source: $SOURCE
 
 apps:
-  algokit:
+  algo:
     command: algokit
     plugs: [home, network]
 EOF

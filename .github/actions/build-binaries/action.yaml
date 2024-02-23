@@ -62,6 +62,7 @@ runs:
         if [ "${{ inputs.production_release }}" == "true" ]; then
           tar -zcvf ../../algokit-${{ env.RELEASE_VERSION }}-${{ inputs.operating_system }}-${{ inputs.architecture }}-py${{ inputs.python_version }}.tar.gz *
           echo ${{ inputs.distribution }} > ./_internal/distribution_channel/distribution_channel.txt
+          cat ./_internal/distribution_channel/distribution_channel.txt
           tar -zcvf ../../algokit-${{ env.RELEASE_VERSION }}-${{ inputs.distribution }}-${{ inputs.architecture }}-py${{ inputs.python_version }}.tar.gz *
         else
           tar -zcvf ../../algokit-${{ inputs.operating_system }}-${{ inputs.architecture }}-py${{ inputs.python_version }}.tar.gz *

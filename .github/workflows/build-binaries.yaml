@@ -29,7 +29,7 @@ jobs:
             distribution: "brew"
           - os: macos-14
             build_command: "poetry run poe package_unix"
-            distribution: "brew-14"
+            distribution: "brew"
     steps:
       - name: Checkout source code
         uses: actions/checkout@v4
