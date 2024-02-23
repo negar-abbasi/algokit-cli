@@ -108,7 +108,7 @@ def read_distribution_file() -> str:
     if not is_binary_mode():
         file_path = Path(__file__).resolve().parents[3] / "misc" / "distribution-method"
     else:
-        file_path = Path(__file__).resolve().parents[2] / "distribution-method" / "distribution-method"
+        file_path = Path(__file__).resolve().parents[2] / "algokit" / "distribution-method"
     with Path.open(file_path) as file:
         content = file.read().strip()
 
