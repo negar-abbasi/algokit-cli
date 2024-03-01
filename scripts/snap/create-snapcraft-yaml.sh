@@ -34,7 +34,7 @@ description: |
   The goal of AlgoKit is to help developers build and launch 
   secure, automated production-ready applications rapidly.
 
-base: core22
+base: core
 confinement: devmode
 grade: devel
 
